@@ -44,7 +44,7 @@ class SignupViewController: UIViewController {
         UserDefaults.standard.set(password, forKey: "password")
         
         // 登録ができたらメイン画面に遷移
-        let mainVC = storyboard?.instantiateViewController(identifier: "MainView") // storyboardIDを設定しなければならない
+        let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainView") // storyboardIDを設定しなければならない
         mainVC?.modalPresentationStyle = .fullScreen // 遷移先画面をフルスクリーンにする
         self.present(mainVC!, animated: true, completion: nil)
         
@@ -53,7 +53,7 @@ class SignupViewController: UIViewController {
     func myAlertMessage(myMessage: String) {
         let myAlert = UIAlertController(title: "Alert", message: myMessage, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title:"OK", style: UIAlertAction.Style.default, handler:nil)
-        myAlert.addAction(okAction);
+        myAlert.addAction(okAction)
         self.present(myAlert,animated: true, completion: nil)
     }
     
