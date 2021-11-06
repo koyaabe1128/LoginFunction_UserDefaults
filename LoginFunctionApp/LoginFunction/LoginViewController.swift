@@ -8,6 +8,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var toSignupButton: UIButton!
     
     override func viewDidLoad() {
@@ -16,8 +19,10 @@ class LoginViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
     }
+    @IBAction func loginButton(_ sender: Any) {
+    }
+    
     @IBAction func toSignupButton(_ sender: Any) {
-        
     }
     
 }
